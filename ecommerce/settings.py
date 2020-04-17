@@ -26,7 +26,7 @@ SECRET_KEY = '&!u(c8=@i3l#3dhk5gzg&-&83$db*!oc0bit(t%0q*q9+z9qyc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('HOSTNAME'), "127.0.0.1", "malia-ecomm-test-app.herokuapp.com"]
+ALLOWED_HOSTS = [os.environ.get('HOSTNAME'), "127.0.0.1"]
 
 
 # Application definition
@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
     'django_forms_bootstrap',
+    'accounts',
     'products',
     'cart',
 ]
@@ -69,7 +69,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'cart.context.cart_contents',
+                'cart.contexts.cart_contents'
             ],
         },
     },

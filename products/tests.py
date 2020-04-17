@@ -4,11 +4,12 @@ from .models import Product
 
 # Create your tests here.
 
-class ProductTest(TestCase):
+class ProductTests(TestCase):
     """
-    Here we'll define the tests that we'll run against our Product Model
+    Here we'll define the tests that we'll run against our
+    Product model
     """
 
     def test_str(self):
         test_name = Product(name='A product')
-        self.assertEquals(str(test_name), 'A product')
+        self.assertEqual(str(test_name), 'A product')
