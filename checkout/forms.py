@@ -7,7 +7,7 @@ year = int(datetime.now().strftime("%Y"))
 
 class MakePaymentForm(forms.Form):
     MONTH_CHOICES = [(i, i) for i in range(1, 12)]
-    YEAR_CHOICES = [(i, i) for i in range(year, year + 20)]
+    YEAR_CHOICES = [(i, i) for i in range(2020, 2040)]
 
     credit_card_number = forms.CharField(label='Credit Card Number', required=False)
     ccv = forms.CharField(label="Security Code", required=False)
@@ -17,14 +17,11 @@ class MakePaymentForm(forms.Form):
 
 
 class OrderForm(forms.Form):
+
     class Meta:
         model = Order
-        fields = ('full_name',
-                  'phone_number',
-                  'country',
-                  'street_address1',
-                  'street_address2',
-                  'postcode',
-                  'town_or_city',
-                  'county',
-                  )
+        fields = (
+            'full_name', 'phone_number', 'country', 'postcode',
+            'town_or_city', 'street_address1', 'street_address2',
+            'county'
+        )
