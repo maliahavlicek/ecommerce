@@ -18,16 +18,18 @@ from django.urls import path, include
 from accounts import urls as urls_accounts
 from products import urls as urls_products
 from cart import urls as urls_cart
+from search import urls as urls_search
 from products.views import all_products
-from django.views import static
-from .settings import MEDIA_ROOT
+from django.conf.urls.static import static
+from .settings import MEDIA_ROOT, MEDIA_URL
 
-urlpatterns = [
+urlpatterns = static(MEDIA_URL, document_root=MEDIA_ROOT)
+urlpatterns += [
     path('admin/', admin.site.urls),
     path('', all_products, name='index'),
     path('accounts/', include(urls_accounts)),
     path('products/', include(urls_products)),
     path('cart/', include(urls_cart)),
-    path('media/?P<path>', static.serve, {'document_root': MEDIA_ROOT}),
+    path('search/', include(urls_search)),
 
 ]

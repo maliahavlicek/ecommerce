@@ -1,6 +1,6 @@
 body {
+    padding-top: 100px;
     font-family: Arial;
-    padding-top: 50px;
 }
 
 footer {
@@ -17,4 +17,45 @@ footer {
 
 .accountform {
     padding-top: 20px;
+}
+
+.badge{
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+.product{
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+caption p{
+    word-wrap: break-word;
+}
+.row.row-flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px
+}
+.panel-default{
+    border-color: transparent;
+    padding: 0 10px;
+}
+
+.panel-body{
+    height: 100%;
+    border: solid 1px #dddddd;
+}
+.product-description{
+    min-height: 40px;
 }
