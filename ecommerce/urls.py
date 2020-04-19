@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from accounts import urls as urls_accounts
 from products import urls as urls_products
+from checkout import urls as urls_checkout
 from cart import urls as urls_cart
 from search import urls as urls_search
 from products.views import all_products
@@ -30,6 +31,7 @@ urlpatterns += [
     path('accounts/', include(urls_accounts)),
     path('products/', include(urls_products)),
     path('cart/', include(urls_cart)),
+    path('checkout/', include(urls_checkout)),
     path('search/', include(urls_search)),
 
 ]
